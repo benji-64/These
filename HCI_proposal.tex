@@ -57,6 +57,7 @@
 \usepackage{placeins}
 \usepackage{tikz}
 \usepackage{tikz-3dplot}
+\usetikzlibrary{positioning,arrows.meta}
 \usepackage{xurl}
 \usepackage{epigraph}
 \usepackage{enumitem}
@@ -162,7 +163,7 @@ L'idée selon laquelle les consommateurs recherchent des expériences plutôt qu
 
 \paragraph{Définition de expérience client} D
 
-Il existe plusieurs définitions de ce qu'est l'expérience client, \textcite{lemon16} sélectionnent les principales. Celles-ci convergent vers une définition multidimensionnelle et holistique du phénomène. Les dimensions spécifiques prises en compte diffèrent d'une définition à l'autre, cependant le cœur reste majoritairement semblable. \textcite{schmitt99} propose une première structuration en identifiant cinq types d’expériences : sensorielles, affectives, cognitives, physiques et sociales. \textcite{verhoef09} définissent l'expérience client de manière similaire avec les dimensions cognitives, affectives, physiques, sociales et y ajoutent la dimension émotionnelle. Les dimensions affectives et emotionnelles se distinguent par leur temporalité, une émotion est de court terme. Dans le domaine des marques, \textcite{brakus09} distinguent les différentes dimensions internes au consommateur et subjectives — sensations, émotions et cognitives — de la dimension comportementale. D'autres travaux mettent en avant la diversité de ces expériences en les reliant, par exemple, aux composantes du \emph{retail mix} \parencite{grewal09}. Enfin, \textcite{dekeyser15} décrivent l'expérience client comme l'ensemble des éléments cognitifs, émotionnels, physiques, sensoriels, spirituels et sociaux qui marquent l'interaction directe ou indirecte avec un acteur du marché. Malgré leurs divergences, ces définition s'accordent sur le besoin d'une approche holistique et qu'il y a au moins une dimension liée à l'affect et au émotions.  \par
+Il existe plusieurs définitions de ce qu'est l'expérience client, \textcite{lemon16} sélectionnent les principales. Celles-ci convergent vers une définition multidimensionnelle et holistique du phénomène. Les dimensions spécifiques prises en compte diffèrent d'une définition à l'autre, cependant le cœur reste majoritairement semblable. \textcite{schmitt99} propose une première structuration en identifiant cinq types d'expériences : sensorielles, affectives, cognitives, physiques et sociales. \textcite{verhoef09} définissent l'expérience client de manière similaire avec les dimensions cognitives, affectives, physiques, sociales et y ajoutent la dimension émotionnelle. Les dimensions affectives et emotionnelles se distinguent par leur temporalité, une émotion est de court terme. Dans le domaine des marques, \textcite{brakus09} distinguent les différentes dimensions internes au consommateur et subjectives — sensations, émotions et cognitives — de la dimension comportementale. D'autres travaux mettent en avant la diversité de ces expériences en les reliant, par exemple, aux composantes du \emph{retail mix} \parencite{grewal09}. Enfin, \textcite{dekeyser15} décrivent l'expérience client comme l'ensemble des éléments cognitifs, émotionnels, physiques, sensoriels, spirituels et sociaux qui marquent l'interaction directe ou indirecte avec un acteur du marché. Malgré leurs divergences, ces définition s'accordent sur le besoin d'une approche holistique et qu'il y a au moins une dimension liée à l'affect et au émotions.  \par
 
 \paragraph{Relation client dans l'expérience} E
 
@@ -173,48 +174,132 @@ L'expérience client prend en compte l'intégralité de l'offre d'une entreprise
 \paragraph{L'importance de la réclamation pour la relation client} F
 
 
-La littérature souligne que la gestion des réclamations constitue un élément central de la relation client. En effet, la manière dont une organisation traite les réclamations influence directement la satisfaction, la confiance et l’engagement des clients, c’est-à-dire les fondements mêmes du marketing relationnel \parencite{tax98complaint}. Une réponse efficace aux réclamations renforce la relation en améliorant la justice perçue et en réduisant le risque de rupture de la relation \parencite{davidow03}. Certains auteurs vont jusqu’à considérer la gestion des réclamations comme « le cœur du CRM », dans la mesure où les réclamations représentent des moments de vérité déterminants pour la qualité de la relation et la fidélité à long terme \parencite{wirtz06}. Ainsi, loin d’être un simple dispositif correctif, la gestion des réclamations s’inscrit au cœur des stratégies relationnelles visant à maintenir et développer la relation client.
+La littérature souligne que la gestion des réclamations constitue un élément central de la relation client. En effet, la manière dont une organisation traite les réclamations influence directement la satisfaction, la confiance et l'engagement des clients, c'est-à-dire les fondements mêmes du marketing relationnel \parencite{tax98complaint, lewis83}. Une réponse efficace aux réclamations renforce la relation en améliorant la justice perçue et en réduisant le risque de rupture de la relation \parencite{davidow03}. Certains auteurs vont jusqu'à considérer la gestion des réclamations comme « le cœur du CRM », dans la mesure où les réclamations représentent des moments de vérité déterminants pour la qualité de la relation et la fidélité à long terme \parencite{wirtz06}. Ainsi, loin d'être un simple dispositif correctif, la gestion des réclamations s'inscrit au cœur des stratégies relationnelles visant à maintenir et développer la relation client.
 
 \paragraph{Bonne relation améliore la gestion de réclamation} G
 
-Par ailleurs, une relation bien établie rend la gestion des réclamations plus efficace : les clients engagés sont plus enclins à exprimer leurs insatisfactions plutôt qu’à se détourner silencieusement, et ils se montrent généralement plus indulgents face aux défaillances de service \parencite{tax98complaint,davidow03}. Ainsi, la relation client agit comme un amortisseur des expériences négatives et comme un catalyseur des expériences positives. Elle contribue également à réduire les coûts d’acquisition et de rétention, les clients fidèles nécessitant moins d’incitations marketing et générant davantage de recommandations spontanées \parencite{reichheld90,brown05}.
+Par ailleurs, une relation bien établie rend la gestion des réclamations plus efficace : les clients engagés sont plus enclins à exprimer leurs insatisfactions plutôt qu'à se détourner silencieusement, et ils se montrent généralement plus indulgents face aux défaillances de service \parencite{tax98complaint,davidow03}. Ainsi, la relation client agit comme un amortisseur des expériences négatives et comme un catalyseur des expériences positives. Elle contribue également à réduire les coûts d'acquisition et de rétention, les clients fidèles nécessitant moins d'incitations marketing et générant davantage de recommandations spontanées \parencite{reichheld90,brown05}.
 
-
-Voir \textcite{verhoef10} pour customer engagement \\
 
 
 
 \subsection{Models théoriques de la réclamation client}
 
 
-\paragraph{models théoriques de la RC} G
+\paragraph{Qu'est-ce que la réclamation client} A
+
+Le développement d'Internet, et plus particulièrement la possibilité de formuler des réclamations en ligne, a renforcé l'importance de ce sujet \parencite{kitapci19}. Selon \textcite{jasper13}, Internet a augmenté la probabilité d'émettre une réclamation. \textcite{landon80} définit une réclamation comme l'expression de l'insatisfaction d'un consommateur à l'attention d'un parti responsable. Cette expression ne comporte pas nécessairement la cause de l'insatisfaction et peut être formulée à l'écrit ou à l'oral. Le destinataire doit être le parti considéré comme responsable, ce qui permet de distinguer une réclamation d'un simple bouche-à-oreille. \textcite{singh88} revient sur les différentes définitions proposées dans la littérature et identifie trois niveaux de restriction :
+\begin{enumerate}
+	\item les réclamations incluent uniquement les \textbf{expressions} d'insatisfaction \textbf{adressées à un parti responsable} \parencite{landon80, jacoby81},
+	\item les réclamations incluent les réponses comportementales ne visant pas seulement le parti responsable mais aussi l'entourage, comme dans le cas du \textbf{bouche-à-oreille} \parencite{richins83, best77, day79},
+	\item les réclamations incluent toute réponse, \textbf{comportementale ou non}, à une insatisfaction \parencite{day84, singh88, kitapci19, arora20}. \textcite{day81} cite par exemple le cas d'un client ayant oublié l'événement insatisfaisant et dont la réponse consiste, par conséquent, à ne rien faire.
+\end{enumerate}
+
+Pour clarifier la confusion autour de l'élément comportemental de la réclamation, \textcite{boote98} proposent de remplacer «\,réclamation client\,» par «\,réponse du client à l'insatisfaction\,». À l'issue d'une revue de la littérature, \textcite{kitapci19} considèrent la définition de \textcite{singh88} comme la plus largement adoptée. \par
 
 
-Tax, Brown \& Chandrashekaran (1998): relationship quality shapes perceived justice and recovery outcomes.
+\paragraph{Les différentes typologies de réclamation client} B \parencite{hirschman70}
 
+Les premières tentatives de classification des réactions des consommateurs face à l'insatisfaction apparaissent avec \textcite{hirschman70}, qui identifient trois formes de réponses : « exit », « voice » et « loyalty ». Le terme « exit » renvoie à la décision du consommateur d'éviter les produits ou services d'une entreprise. « Voice » désigne l'expression directe d'une plainte auprès de l'organisation, par exemple via des canaux en ligne. Enfin, « loyalty » correspond à l'absence d'action de la part du consommateur malgré son mécontentement. \par 
+
+\begin{figure}[H]
+\centering
+\begin{tikzpicture}[
+  node distance=2.5cm,
+  >=Stealth,
+  typNode/.style={rectangle, rounded corners, draw, align=center, minimum width=3cm, minimum height=1cm}
+]
+
+\node[typNode] (ins) {Insatisfaction};
+\node[typNode, above right=1.2cm and 2.8cm of ins] (exit)  {« Exit »\\(sortie / désengagement)};
+\node[typNode, right=2.8cm of ins] (voice) {« Voice »\\(réclamation / prise de parole)};
+\node[typNode, below right=1.2cm and 2.8cm of ins] (loyalty) {« Loyalty »\\(inaction / loyauté résiduelle)};
+
+\draw[->] (ins.east) -- ++(0.5,0) |- (exit.west);
+\draw[->] (ins) -- (voice);
+\draw[->] (ins.east) -- ++(0.5,0) |- (loyalty.west);
+
+\end{tikzpicture}
+\caption{Typologie des réactions à l'insatisfaction selon Hirschman (1970)}
+\end{figure}
+
+
+\paragraph{Les différentes typologies de réclamation client} C \parencite{day77}
+
+\textcite{day77} proposent par la suite une classification plus structurée, reposant sur deux niveaux. Le premier distingue les consommateurs qui réagissent de ceux qui demeurent passifs. Parmi les consommateurs actifs, le second niveau différencie les actions publiques des actions privées. Les démarches de compensation auprès de l'entreprise ou le recours à des procédures juridiques constituent des actions publiques \parencite*{heung03}, tandis que le changement de fournisseur ou le bouche-à-oreille négatif (\emph{Negative Word of Mouth}, NWOM) relèvent des actions privées \parencite{kitapci09}.\par % De nombreuses typologies alternatives ont été proposées (par exemple \nptextcite{leek17}), mais la classification de Day et Landon demeure une référence centrale \parencites{nimako12}{panda14}. \par
+
+\begin{figure}[H]
+\centering
+\begin{tikzpicture}[
+  node distance=2cm,
+  >=Stealth,
+  typNode/.style={rectangle, rounded corners, draw, align=center, minimum width=2.5cm, minimum height=1cm}
+]
+
+\node[typNode] (ins) {Insatisfaction};
+
+\node[typNode, above right=0.5cm and 2cm of ins] (actif)  {Consommateur\\ actif};
+\node[typNode, below right=0.5cm and 2cm of ins] (passif) {Consommateur\\ passif};
+
+\node[typNode, above right=0cm and 2.5cm of actif] (pub)  {Actions publiques\\(réclamation,\\ recours juridiques)};
+\node[typNode, below right=0cm and 2.5cm of actif] (priv) {Actions privées\\(changement de fournisseur,\\ NWOM)};
+
+\draw[->] (ins.east) -- ++(0.5,0) |- (actif.west);
+\draw[->] (ins.east) -- ++(0.5,0) |- (passif.west);
+
+\draw[->] (actif.east) -- ++(0.5,0) |- (pub.west);
+\draw[->] (actif.east) -- ++(0.5,0) |- (priv.west);
+
+\end{tikzpicture}
+\caption{Typologie des réactions selon Day \& Landon (1977)}
+\end{figure}
+
+\paragraph{Les différentes typologies de réclamation client} D \parencite{singh88}
+
+Enfin, \textcite{singh88} affinent ces approches en distinguant trois grandes catégories de réponses à l'insatisfaction : \textbf{les réponses privées} (par exemple le bouche-à-oreille), \textbf{les réponses publiques aux acteurs impliqués} dans la transaction (telles que la réclamation directe auprès de l'entreprise) et \textbf{les réponses publiques aux acteurs non-impliqués} dans la transaction (comme le recours à une agence de protection du consommateur ou à une action en justice).\par % Cette classification s’est imposée comme l’une des plus utilisées dans la littérature sur les réclamations clients . \par
+
+\begin{figure}[H]
+\centering
+\begin{tikzpicture}[
+  node distance=2.4cm,
+  >=Stealth,
+  typNode/.style={rectangle, rounded corners, draw, align=center, minimum width=4cm, minimum height=1cm}
+]
+
+\node[typNode] (ins) {Insatisfaction};
+
+\node[typNode, above right=1.4cm and 3.2cm of ins] (priv) {Réponses privées\\(bouche-à-oreille, évitement)};
+\node[typNode, right=4.2cm of ins] (pubnon) {réponses publiques impliquées \\(réclamation à l’entreprise,\\Pas d'action)};
+\node[typNode, below right=1.4cm and 3.2cm of ins] (pubjur) {réponses publiques non-impliquées\\(recours juridiques)};
+
+\draw[->] (ins.east) -- ++(0.7,0) |- (priv.west);
+\draw[->] (ins) -- (pubnon);
+\draw[->] (ins.east) -- ++(0.7,0) |- (pubjur.west);
+
+\end{tikzpicture}
+\caption{Typologie des réponses à l’insatisfaction selon Singh (1988)}
+\end{figure}
+
+Relire \textcite{nimako12, panda14} pour la taxonomie la plus utilisée.
+
+
+\paragraph{Les enjeux de la gestion des réclamations} E
 
 Brown et al. (2005): relational quality increases advocacy behaviors.
 Palmatier et al. (2006): relational investments boost WOM through trust and commitment.
 
+\textcite{day77satisfaction} modèle de la satisfaction des consommateurs
+
+Voir \textcite{verhoef10} pour customer engagement et WOM
+
+La gestion des réclamations clients constitue un enjeu essentiel pour toute organisation, qu’il s’agisse de leur collecte, de leur analyse ou de la formulation de réponses appropriées. Une réclamation émanant d’un client constitue une source précieuse d’informations pour l’amélioration continue \parencite{harari92}
+
+gestion des réclamations représente un levier déterminant pour perfectionner la conception et la prestation des biens et services \parencite{tax1998}.
+
+un client qui exprime une plainte est un client encore impliqué, qui manifeste un intérêt résiduel envers l’organisation \parencite{harari92} \parencite{richard95}. 
 
 
-
-\break
-
-
-
-
-
-
-
-La gestion des réclamations clients constitue un enjeu essentiel pour toute organisation, qu’il s’agisse de leur collecte, de leur analyse ou de la formulation de réponses appropriées. Une réclamation émanant d’un client constitue une source précieuse d’informations pour l’amélioration continue \parencite[]{harari92} ; elle représente un levier déterminant pour perfectionner la conception et la prestation des biens et services \parencite[]{tax1998}. Par ailleurs, un client qui exprime une plainte est un client encore impliqué, qui manifeste un intérêt résiduel envers l’organisation \parencite[]{harari92}. Il apparaît dès lors évident que la gestion des réclamations occupe une place stratégique dans la relation client. Si cette reconnaissance est désormais bien établie dans le secteur privé, elle demeure relativement récente au sein du secteur public, notamment en ce qui concerne les interactions entre l’administration et ses usagers. \par 
-
-Cette thèse s’inscrit dans la littérature portant sur le comportement de réclamation des consommateurs (\emph{Consumer Complaint Behavior}, CCB). Ce champ de recherche s’intéresse aux mécanismes d’insatisfaction des consommateurs consécutifs à une expérience négative \parencite{richard95}. Selon \textcite{hirschman70}, cette insatisfaction peut se manifester sous trois formes : « exit », « voice » et « loyalty ». Le terme « exit » renvoie à la décision du consommateur d’éviter les produits ou services d’une entreprise. « Voice » désigne l’expression directe d’une plainte auprès de l’organisation, par exemple via des canaux en ligne. Enfin, « loyalty » correspond à l’absence d’action de la part du consommateur, malgré son mécontentement. \par 
-
-\textcite{day77} proposent une classification des réactions des consommateurs structurée en deux niveaux. Le premier distingue les consommateurs qui réagissent de ceux qui demeurent passifs. Parmi les consommateurs actifs, le second niveau différencie les actions publiques des actions privées. Les démarches de compensation auprès de l’entreprise ou le recours à des procédures juridiques constituent des exemples d’actions publiques \parencite*{heung03}, tandis que le changement de fournisseur ou le bouche-à-oreille négatif (\emph{Negative Word of Mouth}, NWOM) relèvent des actions privées \parencite{kitapci09}. Bien que de nombreuses typologies des réactions face à l’insatisfaction aient été proposées (par exemple \nptextcite{leek17}), la classification de Day et Landon demeure une référence fondatrice dans la littérature \parencites[]{nimako12}[]{panda14}[]{singh88}. \par
-
-
-
+Il apparaît dès lors évident que la gestion des réclamations occupe une place stratégique dans la relation client. Si cette reconnaissance est désormais bien établie dans le secteur privé, elle demeure relativement récente au sein du secteur public, notamment en ce qui concerne les interactions entre l’administration et ses usagers. \par
 
 \section{La relation usager : un cas particulier}
 
@@ -559,8 +644,10 @@ Les modèles D-SM et ZSL nous donnent tous deux une probabilité que chaque comm
 \section{Les sujets}
 \section{Les problèmes}
 \chapter{L'expression des émotions : le rôle que l'on se donne (temporaire)}
-\chapter{L'importance de l'injustice}
+\chapter{L'importance de l'injustice : acquis vs demandes}
 Voir \textcite{blodgett97} pour justice dans reclamation client
+
+Tax, Brown \& Chandrashekaran (1998): relationship quality shapes perceived justice and recovery outcomes.
 
 \clearpage
 \newpage
