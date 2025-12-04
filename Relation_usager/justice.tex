@@ -1,7 +1,5 @@
 \documentclass[a4paper,12pt, openany]{book}
-
-\usepackage[subpreambles=false]{standalone}
-\usepackage{import}
+\usepackage[subpreambles=true]{standalone}
 
 %----------------------------------------
 % LANGUE & TYPO
@@ -79,7 +77,7 @@
   backend=biber,
   style=apa
 ]{biblatex}
-\addbibresource{../ref.bib}
+\addbibresource{../../ref.bib}
 
 % Mise en forme biblio
 \renewcommand*{\bibfont}{\normalsize}
@@ -118,107 +116,7 @@
 \displaywidowpenalty=100000
 \brokenpenalty=100000
 
+
 \begin{document}
-
-\frontmatter
-
-\begin{titlepage}
-\vspace*{3cm}
-
-\begin{center}
-\LARGE{\textbf{Thèse}}
-\end{center}
-
-\vspace{3cm}
-
-\begin{center}
-\hspace{3cm}
-\textbf{LEVY BENJAMIN %\hfill BENAVENT CHRISTOPHE
-} \hspace*{3cm} \\ \medskip
-     \textbf{Dauphine Recherches en Management  (DRM),\\
-      Université Paris Dauphine-PSL
-}
-\end{center}
-
-\vspace{1cm}
-\end{titlepage}
-
-\let\cleardoublepage\clearpage
-{
-  \setlength{\parskip}{0pt}
-  \setlength{\parindent}{15pt}
-  \tableofcontents
-}
-
-
-\mainmatter
-
-\chapter{Introduction}
-
-\part{Cadres théoriques}
-
-\chapter{La relation usager}
-
-\section{La relation client : le cas général}
-
-\import{Relation_usager/}{relation_client.tex}
-
-
-\section{La relation usager : un cas particulier}
-
-\import{Relation_usager/}{relation_usager.tex}
-
-\chapter{Justice}
-
-\import{Relation_usager/}{justice.tex}
-
-
-\chapter{Les émotions}
-
-\import{emotions/}{emotions.tex}
-
-\break
-
-
-\part{Analyses et discussions}
-
-
-\chapter{L'analyse des émotions}
-
-Construction d'échelles
-
-Dimensions structurelles
-
-Faire étude de cas longitudinale pour valider méthode Frances Titres
-
-
-
-\import{Methodologie/}{methodologie.tex}
-
-
-\chapter{Comment les services publics génèrent des émotions chez les usagers}
-\section{Les différents profils émotionnels des usagers}
-\section{Les services}
-\section{Les sujets}
-\section{Les problèmes}
-
-\chapter{L'importance de l'injustice : acquis vs demandes}
-Voir \textcite{blodgett97} pour justice dans reclamation client
-
-Tax, Brown \& Chandrashekaran (1998): relationship quality shapes perceived justice and recovery outcomes.
-
-voir Yasmine siblot
-
-\textcite{sunshine03}
-
-\clearpage
-\newpage
-
-\backmatter
-
-\printbibliography
-
-\break
-%\noindent\textbf{Figures :}
 
 \end{document}
